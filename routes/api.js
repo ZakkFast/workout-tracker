@@ -65,4 +65,20 @@ router.delete('/api/workouts', async ({ body }, res) => {
   }
 });
 
+// @ GET
+// @ Route   /api/workouts/range
+// @ decs    Get workout by range
+router.get('/api/workouts/range', async ({ body }, res) => {
+  try {
+    const workout = await workoutDB.Workout
+    .find({})
+    .limit(10);
+
+    res.json(workout);
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send('Server Error');
+  }
+});
+
 module.exports = router;
