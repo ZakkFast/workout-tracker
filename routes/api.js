@@ -1,9 +1,9 @@
 const express = require('express');
 const router = express.Router();
-const workoutDB = require('../../models/');
+const workoutDB = require('../models');
 
 
-// @Route   GET all workouts
+// @Route   /api/workouts
 // @decs    Getting all workouts from the DB.
 router.get('/api/workouts', async (req, res) => {
   try {
@@ -19,7 +19,17 @@ router.get('/api/workouts', async (req, res) => {
   }
 });
 
-// @Route   GET all workouts
-// @decs    Getting all workouts from the DB.
+// @Route   /api/workouts
+// @decs    Create new workout
+router.post('/api/workouts', async (req, res) => {
+  try {
+    const workout = await workoutDB.Workout.create(req.body)
+
+    res.json(workout)
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send('Server Error');
+  }
+})
 
 module.exports = router;
