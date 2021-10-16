@@ -2,6 +2,9 @@ const express = require('express');
 const router = express.Router();
 const workoutDB = require('../../models/');
 
+
+// @Route   GET all workouts
+// @decs    Getting all workouts from the DB.
 router.get('/api/workouts', async (req, res) => {
   try {
     const workout = await workoutDB.Workout.find({});
@@ -15,5 +18,8 @@ router.get('/api/workouts', async (req, res) => {
     res.status(500).send('Server Error');
   }
 });
+
+// @Route   GET all workouts
+// @decs    Getting all workouts from the DB.
 
 module.exports = router;
