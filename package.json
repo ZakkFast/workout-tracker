@@ -8,6 +8,7 @@
     "start": "node server.js",
     "watch": "nodemon server.js",
     "seed": "node seeders/seed.js",
+    "build": "netlify-lambda build express",
     "server": "nodemon server"
   },
   "author": "Zakk Fast",
@@ -17,7 +18,8 @@
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "mongoose": "^5.13.11",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "netlify-lambda": "^2.0.15"
   },
   "repository": {
     "type": "git",
