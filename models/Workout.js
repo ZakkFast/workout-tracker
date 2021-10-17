@@ -6,13 +6,13 @@ const WorkoutSchema = new Schema({
         type: Date,
         default: Date.now
     },
-    excerises: [
+    exercises: [
         {
             type: {
                 type: String
             },
             name: {
-                tpye: String
+                type: String
             },
             duration: Number,
             weight: {
@@ -21,7 +21,7 @@ const WorkoutSchema = new Schema({
             reps: {
                 type: Number
             },
-            set: {
+            sets: {
                 type: Number
             },
             distance : {
@@ -29,7 +29,7 @@ const WorkoutSchema = new Schema({
             }
         }
     ],
-    totalduration: {
+    totalDuration: {
         type: Number,
         default: 0
     }
