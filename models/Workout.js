@@ -14,7 +14,9 @@ const WorkoutSchema = new Schema({
             name: {
                 type: String
             },
-            duration: Number,
+            duration: {
+                type: Number
+            },
             weight: {
                 type: Number,
             },
