@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const db = require('../models');
 const connectDB = require('../config/db');
 
-connectDB()
+connectDB();
 
 const workoutSeed = [
   {
