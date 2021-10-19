@@ -49,11 +49,11 @@ router.put('/api/workouts/:id', async (req, res) => {
 
 ### Screenshots: 
 #### Landing Page
-![Workout Screenshot One](public\assets\imgs\workout1.png)
+![Workout Screenshot One](public/assets/imgs/workout1.png)
 #### Adding or Updating Workout
-![Workout Screenshot Two](public\assets\imgs\workout2.png)
+![Workout Screenshot Two](public/assets/imgs/workout2.png)
 #### Dashboard displaying workout statistics
-![Workout Screenshot Three](public\assets\imgs\workout3.png)
+![Workout Screenshot Three](public/assets/imgs/workout3.png)
 
 
 ### Deployed Links:
